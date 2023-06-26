@@ -1,38 +1,130 @@
-.App {
-  text-align: center;
+.switch{
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-top: 20px;
+  top: -67px;
+  left: 60px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.switch input{
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.slider{
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.slider:before{
+  position: absolute;
+  content: "off";
+  height: 26px;
+  width: 26px;
+  left:4px;
+  right:4px;
+  background-color: white;
+  margin-top: 4px;
+  transition: 0.4s;
+  border-radius: 50%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+input:checked + .slider{
+  background-color: green;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+input:checked + .slider:before{
+  transform: translate(26px);
+  content: "on";
+}
+
+.drum-machine {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30vh;
+  width: 600px;
+  height: 300px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-left: 30%;
+}
+
+.drum{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-right: 140px;
+
+}
+
+.drum-pad{
+  width: 80px;
+  height: 80px;
+  font-size: large;
+  font-weight: bold;
+  background-color: gray;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 8px #888;
+}
+.drum-pad.clicked {
+  background-color: orange;
+}
+
+#display{
+  width: 120px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: gray;
+}
+
+.title{
+  position: relative;
+  top: -80px;
+  font-size: x-large;
+  left: 20px;
+}
+
+.power{
+  font-size: large;
+  font-weight: bold;
+  position: relative;
+  top: -20px;
+}
+
+#display{
+  position: relative;
+  top:-40px;
+  font-weight: bolder;
+}
+
+
+
+@media (max-width: 767px) {
+
+  .drum-machine{
+    margin-right: 40px;
+    margin-left: 0px;
+    margin-top: 120%;
   }
-  to {
-    transform: rotate(360deg);
-  }
+
 }
