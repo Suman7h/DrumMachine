@@ -112,7 +112,7 @@ function App() {
     <div className="App">
       <div className="drum-machine" id="drum-machine">
         <div className='drum'>
-          {drumSrc.map((drumPad)=> <button key={drumPad.unq} className={`drum-pad ${clickedPad === drumPad.text ? 'clicked' : ''}`} onClick={()=>power && playSound(drumPad.name)} id={drumPad.unq}>{drumPad.text}
+          {drumSrc.map((drumPad)=> <button key={drumPad.unq} className={`drum-pad ${clickedPad === drumPad.name ? 'clicked' : ''}`} onClick={()=>power && playSound(drumPad.name)} id={drumPad.unq}>{drumPad.text}
           <audio src={drumPad.src}className="clip" id={drumPad.name}></audio>
           </button> )}
         </div >
