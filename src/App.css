@@ -95,6 +95,9 @@ input:checked + .slider:before{
   align-items: center;
   border-radius: 10px;
   background-color: gray;
+  position: relative;
+  top:-40px;
+  font-weight: bolder;
 }
 
 .title{
@@ -111,11 +114,7 @@ input:checked + .slider:before{
   top: -20px;
 }
 
-#display{
-  position: relative;
-  top:-40px;
-  font-weight: bolder;
-}
+
 
 
 
@@ -123,8 +122,65 @@ input:checked + .slider:before{
 
   .drum-machine{
     margin-right: 40px;
-    margin-left: 0px;
-    margin-top: 120%;
+    margin-left: 110px;
+    margin-top: 50%;
+    width: 350px;
+    height: 180px;
+  }
+
+  .drum{
+    padding-right: 100px;
+  }
+  .drum-pad{
+    width: 40px;
+    height: 40px;
+    font-size: small;
+  }
+
+  .title{
+    position: relative;
+    top:-30px;
+    font-size: small;
+  }
+
+  .power{
+    font-size: small;
+    position: relative;
+    top: 0;
+  }
+
+  .switch{
+    
+    position: relative;
+    top:-40px;
+    width:40px;
+    height:25px;
+  }
+
+  .slider{
+    border-radius: 17px;
+
+  }
+
+  .slider:before{
+    height: 18px;
+    width: 18px;
+    left:2px;
+    right:2px;
+    font-size: small;
+  }
+
+  input:checked + .slider:before{
+    transform: translate(18px);
+    font-size: small;
+  }
+
+  #display{
+
+    width: 80px;
+    height: 25px;
+    font-size: small;
+    top: -20px;
   }
 
 }
